@@ -1,16 +1,19 @@
-# 🛠️ Ferramentas de Engenharia com Python
+# ✈️ CEAC-Aerodynamics-Lab
 
-Este repositório contém ferramentas de automação e cálculo desenvolvidas para auxiliar em tarefas de engenharia e data entry.
+Simulador interativo de escoamento de fluidos ao redor de um perfil NACA 0012, integrando um motor de cálculo em Python com visualização 3D em tempo real.
 
-## 🚀 Projetos Incluídos
-1. **Calculadora Quadrática (GUI):** Aplicação Desktop com interface gráfica para resolver equações de 2º grau e plotar gráficos automaticamente.
-2. **Comparador de Valores:** Ferramenta de validação de dados com tratamento de erros.
+## 🚀 Tecnologias e Física Aplicada
+Este projeto é um **Solver Híbrido** desenvolvido para o CEAC-Lab:
 
-## 💻 Tecnologias Usadas
-* Python 3.14
-* Matplotlib (Visualização de Dados)
-* Tkinter (Interface Gráfica)
-* PyInstaller (Compilação de executáveis)
+* **Backend (Python/FastAPI):** Resolve o **Vortex Panel Method** (Método de Painéis de Vórtice) utilizando matrizes do NumPy para calcular a circulação e o Coeficiente de Sustentação ($C_L$).
+* **Frontend (Three.js/WebGL):** Renderiza o campo de vetores através de superposição linear, criando *streamlines* dinâmicas com suavização de singularidade.
+* **Engenharia:** Telemetria de Número de Reynolds em tempo real e monitoramento de Ângulo de Ataque com alerta de Estol (Stall).
 
-## autor
-Enio Oliveira - Estudante de Engenharia Civil e Ambiental
+## 🛠️ Como rodar
+1. Instale as dependências: `pip install fastapi uvicorn numpy`
+2. Inicie o servidor: `python main.py`
+3. Abra o `index.html` no seu navegador.# 🛠️ Ferramentas de Engenharia com Python
+
+
+
+

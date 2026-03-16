@@ -158,3 +158,39 @@ button:hover {
     font-size: 1.1rem;
     font-weight: bold;
 }
+
+/* Mantenha o que você já tem e adicione/ajuste isso: */
+.button-group {
+    display: flex;
+    gap: 10px;
+    margin-top: 1rem;
+}
+
+button {
+    flex: 1;
+    padding: 0.8rem;
+    background: transparent;
+    border: 1px solid var(--accent-blue);
+    color: var(--accent-blue);
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+    text-transform: uppercase;
+    font-size: 0.7rem;
+}
+
+button:hover {
+    background: var(--accent-blue);
+    color: #fff;
+}
+
+#reset-data {
+    border-color: #30363d;
+    color: #8b949e;
+}
+
+#reset-data:hover {
+    background: #30363d;
+}

@@ -3,36 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CEAC | Engineering Dashboard</title>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <title>CEAC-Lab | Aerodinâmica</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
-    <main id="app">
+    <div id="app">
         <header>
             <h1>Laboratório Full-Stack: Aerodinâmica</h1>
             <p>Integração Python (Back-end) & JS (Front-end)</p>
         </header>
 
-        <section class="controls">
-            <div class="input-group">
-                <label for="velocity">Velocidade (U): <span id="val-v">10</span> m/s</label>
-                <input type="range" id="velocity" min="0" max="100" value="10">
-            </div>
+        <div class="input-group">
+            <label>Velocidade (U): <span id="val-v">10</span> m/s</label>
+            <input type="range" id="velocity" min="1" max="100" value="10">
+        </div>
 
-            <div class="input-group">
-                <label for="aoa">Ângulo de Ataque (α): <span id="val-aoa">0</span>°</label>
-                <input type="range" id="aoa" min="-20" max="20" value="0">
-            </div>
+        <div class="input-group">
+            <label>Ângulo de Ataque (α): <span id="val-aoa">0</span> °</label>
+            <input type="range" id="aoa" min="-20" max="20" value="0">
+        </div>
 
+        <div class="button-group">
             <button id="run-simulation">Executar Simulação CFD</button>
-        </section>
-        <div class="button-group" style="display: flex; gap: 10px; margin-top: 10px;">
-    <button id="run-simulation" style="flex: 2;">Executar Simulação CFD</button>
-    <button id="reset-data" style="flex: 1; background: #30363d; border-color: #8b949e;">Reiniciar Painel</button>
-</div>
+            <button id="reset-data">Reiniciar Painel</button>
+        </div>
 
-        <section id="visualizer">
+        <div id="visualizer">
             <div class="telemetry-grid">
                 <div class="telemetry-card">
                     <small>REYNOLDS (Re)</small>
@@ -44,16 +41,14 @@
                 </div>
             </div>
             
-            <div class="chart-wrapper" style="background: rgba(0,0,0,0.2); border-radius: 8px; padding: 15px; margin-bottom: 15px; border: 1px solid rgba(255,255,255,0.05);">
-                <canvas id="performanceChart" style="max-height: 150px;"></canvas>
+            <div style="height: 120px; margin-bottom: 15px;">
+                <canvas id="performanceChart"></canvas>
             </div>
-            
-            <div id="canvas-container"></div>
-            
-            <div id="status-display">Sistema Pronto...</div>
-        </section>
-    </main>
 
+            <div id="canvas-container"></div>
+            <div id="status-display">[00:00:00] Sistema pronto para testes.</div>
+        </div>
+    </div>
     <script type="module" src="main.js"></script>
 </body>
 </html>
